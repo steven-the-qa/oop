@@ -1,0 +1,18 @@
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Add your code below this line
+
+for (let property in canary) {
+ if(canary.hasOwnProperty(property)){
+   ownProps.push(property);
+ }
+}
+
+
+//Using the '.hasOwnProperty' method lets you refer to the 'own' properties from the constructed object
+//Here it is used to loop through the properties in canary to push them to the array 'ownProps'
