@@ -1,0 +1,11 @@
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype.numLegs = 4;
+
+
+// Add your code above this line
+let beagle = new Dog("Snoopy");
+
+//The prototype of an object is like the 'recipe' for creating it
+//Here we reduce duplicated code by pre-setting the Dog object to have a 'numLegs' property by placing it in the prototype
