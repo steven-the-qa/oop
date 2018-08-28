@@ -1,0 +1,11 @@
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+// Add your code below this line
+
+let hound = new Dog();
+
+//The 'new' keyword indicates a new instance of the constructor function
+//The 'hound' variable now contains a copy of the Dog object as outlined by the Dog() constructor
