@@ -1,0 +1,9 @@
+function Dog() {
+  this.name = 'Phillip';
+  this.color = 'purple';
+  this.numLegs = 6;
+}
+
+//Constructor functions are used to create objects
+//Their names always start with a capital letter
+//They use the 'this' keyword when declaring properties
