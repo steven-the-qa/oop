@@ -1,0 +1,15 @@
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+};
+
+dog.sayLegs();
+
+//The 'this' keyword is a complex topic, but above is an example of a simple use of it
+
+//'this' in the context of the 'sayLegs' method refers to the object the property/method is associated with
+
+//That lets us remove the 'dog' name reference from the method and makes the code more reusable
+
+//It protects us from the object's name changing, since 'this' refers to the object regardless of name
