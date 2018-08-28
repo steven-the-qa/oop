@@ -1,0 +1,6 @@
+let dog = {
+  name: 'Lucy',
+  numLegs: 4
+};
+
+//Creating a dog object for the beginning of the OOP section, maybe a setup for later challenges
