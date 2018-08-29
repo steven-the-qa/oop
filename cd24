@@ -1,0 +1,11 @@
+function Bird() {
+  let weight = 15;
+  this.getWeight = function() {
+    return weight
+  }
+}
+
+//This is a more secure way of declaring a weight property inside of a constructor
+//The weight value can't be modified outside of the function, and is read-only via the '.getWeight()' method
+/*The principle that allows the method privileged access to the 'weight' variable 
+because it was declared in its same context is called 'closure' */
