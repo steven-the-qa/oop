@@ -1,0 +1,18 @@
+function Dog(name) {
+  this.name = name; 
+}
+
+// Modify the code below this line
+Dog.prototype = {
+  constructor: Dog,
+  numLegs: 2, 
+  eat: function() {
+    console.log("nom nom nom"); 
+  }, 
+  describe: function() {
+    console.log("My name is " + this.name); 
+  }
+};
+
+//If you're going to use this method of setting the prototype to a new object, you have to also set the constructor property
+//This is because setting the prototype to a new object erases the constructor property and this can lead to issues in your code
