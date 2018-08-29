@@ -1,0 +1,6 @@
+(function () {
+  console.log("A cozy nest is ready");
+})();
+
+//The syntax '(function declaration)()' is a way to immediately call a function once it is declared, and is common practice
+//This is called an IIFE (Immediately Invoked Function Expression)
