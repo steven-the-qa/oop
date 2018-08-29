@@ -1,0 +1,28 @@
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Add your code below this line 
+
+for (let property in beagle){
+  if (beagle.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+  else {
+    prototypeProps.push(property);
+  }
+}
+
+//You can iterate through the object instance to find the 'own' properties and then push them to an array
+//The ones not caught by this loop will be sent to the prototype properties array to be made part of the object prototype (blueprint)
+
+
+/*'Own' properties are defined directly on the object instance itself. 
+And prototype properties are defined on the prototype. -freeCodeCamp */
