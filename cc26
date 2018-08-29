@@ -1,0 +1,22 @@
+let funModule = (function () {
+return {
+isCuteMixin: function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+},
+singMixin: function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+}
+}
+})();
+
+//This is an example of wrapping 2 mixins inside a module that is also an IIFE
+//It's an efficient way to package the properties you want to give to other objects
+
+/*Using it might look like this: 
+funModule.singMixin(bunny);
+bunny.sing(); //returns 'Singing to an awesome tune'
+*/
