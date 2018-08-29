@@ -1,0 +1,20 @@
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal, 
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+// Add your code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype); // Change this line
+
+duck.eat(); // Should print "nom nom nom"
+beagle.eat(); // Should print "nom nom nom" 
+
+//Using the 'let beagle = new Animal()' syntax has disadvantages that aren't covered in this challenge
+//A better way without those disadvantages is to use the 'Object.create()' method to essentially do the same thing
+//'duck' and 'beagle' will both return true for the 'instanceof' operator and share the Animal prototype
