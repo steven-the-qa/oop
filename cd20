@@ -1,0 +1,17 @@
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Add your code below this line
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+let duck = new Bird();
+let beagle = new Dog();
+
+//When a constructor inherits its prototype from its supertype, it ALSO inherits the supertype's constructor property!
+//This must be manually reset to a different value if we want the constructor of the subtype to be unique 
+//Above, we reset Bird's constructor property (currently Animal) to Bird. It still inherits everything from Animal because of the other code
