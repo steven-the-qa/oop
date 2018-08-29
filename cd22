@@ -1,0 +1,19 @@
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Add your code below this line
+Penguin.prototype.fly = () => 'Alas, this is a flightless bird.'
+
+
+// Add your code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+//Overriding an inherited property is as simple as creating a property with the same name within the child object
+//Javascript searches for property definitions starting at the lowest level of inheritance and going all the way up the prototype chain to Object
