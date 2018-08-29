@@ -1,0 +1,20 @@
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Add your code below this line
+Dog.prototype = Object.create(Animal.prototype);
+
+let beagle = new Dog();
+beagle.eat();  // Should print "nom nom nom"
+
+//Setting a constructor's prototype equal to the supertype's prototype is how you get it to inherit all its properties from the supertype
+//So every instance of Dog() now has the '.eat()' method inherited from Animal()
+//Notice how the Dog() constructor has zero code in it, yet still contains information because of inheritance
