@@ -1,0 +1,13 @@
+function Dog(name) {
+  this.name = name; 
+}
+
+Dog.prototype = {
+  // Add your code below this line
+  numLegs: 4,
+  eat: () => console.log('nom nom nom'),
+  describe: () => console.log(`My name is ${this.name}`)
+};
+
+/*Instead of adding properties to the prototype one at a time, 
+you can just set the prototype equal to an object with all those properties already in it*/
