@@ -1,0 +1,14 @@
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+Dog.prototype.isPrototypeOf(beagle);  // => true
+
+// Fix the code below so that it evaluates to true
+Object.prototype.isPrototypeOf(Dog.prototype);
+
+//This is an example of a 'prototype chain'
+//It's meant to illustrate that anything that is a subtype of another prototype can use that supertype's properties
+//It's why every object in Javascript can use '.hasOwnProperty()': The Object.prototype object contains this property.
