@@ -1,0 +1,28 @@
+function Cat(name) {
+  this.name = name; 
+}
+
+Cat.prototype = {
+  constructor: Cat, 
+};
+
+function Bear(name) {
+  this.name = name; 
+}
+
+Bear.prototype = {
+  constructor: Bear, 
+};
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+//This is an example of using inheritance to reduce repetition 
+//In the original example, the Cat and Bear constructors had their own 'eat' method
+//To reduce code in spirit of the principle of DRY (Don't Repeat Yourself), we move the common method to a supertype of both constructors
