@@ -1,0 +1,25 @@
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Add your code below this line
+
+let glideMixin = function(obj) {
+    obj.glide = function() {
+        console.log('Gliding,wooosh!');
+    }
+}
+
+glideMixin(bird);
+glideMixin(boat);
+
+//Mixins are functions that give properties to whatever objects are passed to them
+//Here we make a 'glide' mixin that lets you give a 'glide' property to any object passed to it
+//These are a useful alternative to inheritance, especially for giving unrelated objects the same property
+//This way also reduces code compared to setting the property manually in multiple objects
